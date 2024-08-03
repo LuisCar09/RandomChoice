@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Random Choices</title>
 </head>
-<body>
+<body style="background-color: black;">
+
+    <section class="randomSection" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
+        <h1>Enter all of the choices divided by a comma (',').
+            Press enter when you're done</h1>
+            <textarea name="randomText" id="textarea" placeholder="Enter choices here..." style="width: 200px; height: 200px;">
+
+            </textarea>
+            <ul id="list">
+                
+            </ul>
+            <button>Reset</button>
+    </section>
     <script src="/script.js"></script>
 </body>
 </html>
