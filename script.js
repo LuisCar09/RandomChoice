@@ -12,3 +12,7 @@ textArea.addEventListener('keyup', (e) =>{
 })
 
 
+const showColors = () => {
+    const randomWord = Math.floor(Math.random() * list.length);
+    li.classList.add('item-change');
+}
