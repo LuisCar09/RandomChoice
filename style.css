@@ -61,6 +61,12 @@ body {
 	align-items: center; 
 	color: white;
 }
+article{
+	max-width: 360px;
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+}
 
 h1 {
 	font-size: 20px;
@@ -71,10 +77,12 @@ h1 {
 }
 
 #textarea {
-	width: 200px; 
-	height: 200px;
+	width: 100%; 
+	height: 100px;
 }
-
+#list{
+	margin: 20px 0;
+}
 .list-item{
     list-style-type: none;
 	background-color: #f0932b;
@@ -85,12 +93,22 @@ h1 {
     font-size: 14px;
     display: inline-block;
 }
-
-@keyframes boxAnimation {
-	
+.background-blue{
+	background-color: #273c75;
 }
 
-.item-change {
-	animation: boxAnimation 4s;
-	
+#resetButton{
+	padding: 10px 30px;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	background-color:#f0932b ;
+	border: none;
+	border-radius: 6px;
+	transition: all .1s linear;
+	cursor: pointer;
+}
+
+#resetButton:active{
+	transform: scale(0.95);
 }
