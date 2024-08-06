@@ -8,14 +8,14 @@ textArea.addEventListener('keyup', (e) =>{
 
     words = e.target.value.trim()
     
-    list.innerHTML = words.split(',') //Al momento del usario escribir una , creara el split
-    .filter(item => item) //filtramos para eviar que la colocar ',' no se haga el espacio ('')empty, solo devuelve elementos que su longitud > 1
-    .map(word => `<li class='list-item'>${word}</li>`) //con map estamos creando los tag para luego renderizar.
-    .join('')// eliminando las comas ',' del array, next time i will type this in english sorry.
+    list.innerHTML = words.split(',') //The user writes a word. One word is separated from the other when the user writes a comma. The comma creates a split of the array
+    .filter(item => item) // We filter to avoid empty spaces that can appear because of the comma.The elements(items)that appear(are returned) are only the ones whose length > 1.
+    .map(word => `<li class='list-item'>${word}</li>`) //We use map in order to create tags that can be rendered later on
+    .join('')//  We eliminate the commas from the array
  })
 
 const randomNumber = (length) => {
-    // console.log(length,'Esto es el numero de la longitud del array con los list-item, debe coincidir con la linea 23');
+    // console.log(length,'This is the number of the length of the array that contains list-items');
     return Math.floor(Math.random() * length)
 }
 
@@ -35,7 +35,7 @@ const changeBackground = () =>{
     
     const random = randomNumber(listItem.length) //getting random number
     
-    listItem[random].classList.add('background-blue') //adding .list-item class. According random number given.
+    listItem[random].classList.add('background-blue') //adding .list-item class. According to the random number given.
 }
 document.addEventListener('keyup', (e) => {
     if (e.key === 'Enter') showColors() // if enter key was pressed, it triggers showColors() function. 
@@ -43,6 +43,6 @@ document.addEventListener('keyup', (e) => {
 
 
 resetButton.addEventListener('click', () => {
-    location.reload() // when button is pressed, it reloads navigator(chrome,mazilla,expolorer, etc.). 
+    location.reload() // when button is pressed, it reloads navigator(chrome,mozilla,expolorer, etc.). 
 })
 
